@@ -1,6 +1,6 @@
 // some generic hack detector
 // by Darky
-_whiteList = ["Trolol"];
+_whiteList = ["Ddog"];
 _hackdetect = false;
 _whiteUser = false;
 for "_i" from 0 to ((count _whiteList) - 1) do
