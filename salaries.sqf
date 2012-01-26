@@ -21,7 +21,7 @@ if (_AFK) then
 		sleep 2;
 		player groupChat "You dont receive paychecks while being AFK";
 		sleep 2;
-		if ((_pos1_1 == _pos2_1) and (_pos1_2 == _pos2_2) and (_dir1 == _dir2)) then {format['serverCommand "kick %1";', afkplayer];)
+		if ((_pos1_1 == _pos2_1) and (_pos1_2 == _pos2_2) and (_dir1 == _dir2)) then {format['serverCommand "kick %1";', afkplayer];};
 	}
 	else{ 	
 
@@ -74,7 +74,7 @@ player groupChat format[localize "STRS_geld_copmoneyadd", rolestring, ((round _i
 sleep 1;					
 if(ischief)then{player groupchat format["As a Police Chief you get an extra paycheck of $%1.", (chiefExtraPay call ISSE_str_IntToStr)]};   
 
-};};
+};
 
 while {isciv} do 
 
