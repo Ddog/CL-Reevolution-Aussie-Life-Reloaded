@@ -1,29 +1,12 @@
 while {iscop} do 
 
 {
-_pos1_1 = getPos player select 0;
-_pos1_2 = getPos player select 1;
-afkplayer = name player;
-_dir1 = getDir player;
+
 sleep 60;
 player groupChat format[localize "STRS_geld_countdown", "2"];
 sleep 60;
 player groupChat format[localize "STRS_geld_countdown", "1"];
 sleep 60;
-_pos2_1 = getPos player select 0;
-_pos2_2 = getPos player select 1;
-_dir2 = getDir player;
-if ((_pos1_1 == _pos2_1) and (_pos1_2 == _pos2_2) and (_dir1 == _dir2)) then {_AFK = true} 
-	else {_AFK = false}
-	
-if (_AFK) then 
-	{
-		sleep 2;
-		player groupChat "You dont receive paychecks while being AFK";
-		sleep 2;
-		if ((_pos1_1 == _pos2_1) and (_pos1_2 == _pos2_2) and (_dir1 == _dir2)) then {format['serverCommand "kick %1";', afkplayer];};
-	}
-	else{ 	
 
 if(!alive power1 and !alive power2) then {kraftwerk = 2}else{kraftwerk = 1};
 _income = add_copmoney;
